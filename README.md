@@ -7,7 +7,9 @@ npm install
 
 npm start 
 
-you added program_id in the .env file
+create  .env file  and add program_id in  this file (PROGRAM_ID="put here program id").
+
+
 
 ## Version web3 && nodets
 solana/web3.js: "^1.35.1"
