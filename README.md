@@ -1,14 +1,18 @@
-# spl_authority_generator
+# Spl_Authority_Generator
 generate authority with spl-token
 
-## Run 
-npm i 
-ts-node generateAuthority.ts
+## Run spl_authority_generator
+
+npm install  
+
+npm start 
+
 you added program_id in the .env file
 
-## version web3 && nodets
-solana/web3.js: "^1.35.1",
- ts-node: "^10.5.0"
+## Version web3 && nodets
+solana/web3.js: "^1.35.1"
+
+ts-node: "^10.5.0"
  
 
 
