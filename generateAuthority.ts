@@ -1,26 +1,29 @@
 
 
 import {
- PublicKey,Account,
-} from '@solana/web3.js';
-
-require('dotenv').config();
-
-
-
-export async function generateAutority(): Promise<void> {
-    const program_id:any=process.env.PROGRAM_ID;
-    console.log("program"+program_id)
+    PublicKey,Account,
+   } from '@solana/web3.js';
    
-    let createAccountProgramm = new Account();
-    console.log("create  " + createAccountProgramm.publicKey)
-
-    let [authority, nonce] = await PublicKey.findProgramAddress(
-        [createAccountProgramm.publicKey.toBuffer()],
-        new PublicKey(program_id),
-    );
-    console.log("authority = ", authority.toBase58());
-    console.log("nonce = " + nonce);
-}
-
-generateAutority();
+   require('dotenv').config();
+   
+   
+   
+    async function generateAutority() {
+       const program_id:any=process.env.PROGRAM_ID;
+    
+      
+       let createAccountProgramm = new Account();
+       console.log("Create Account Programm: " )
+       console.log(createAccountProgramm.publicKey.toBase58())
+   
+       let [authority, nonce] = await PublicKey.findProgramAddress(
+           [createAccountProgramm.publicKey.toBuffer()],
+           new PublicKey(program_id),
+       );
+       console.log("Authority :")
+       console.log( authority.toBase58());
+       console.log("Nonce :" )
+       console.log( nonce);
+   }
+   
+   generateAutority();
